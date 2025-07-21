@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anderson Peter | Frontend Developer</title>
+  <link rel="icon" sizes="72x72" href="Images/my-logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; }
+    header { background: #0d6efd; color: white; }
+    .section-title { font-weight: bold; margin-bottom: 1rem; }
+    .nav-items:hover { color: red; }
+    .spinner-border {
+      width: 1rem;
+      height: 1rem;
+      border-width: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="AIP Tech Logo" width="60" height="60" class="d-inline-block align-text-top">
+      AIP TECH
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home" onclick="myFunction()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects" onclick="myFunction()">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" onclick="myFunction()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="text-center p-5">
+  <div class="container">
+    <h1 class="display-4">Hi, I'm Anderson Peter</h1>
+    <p class="lead">Frontend Web Developer | Backend Developer | Fullstack Developer | Problem Solver | Creative Thinker</p>
+    <a href="#contact" class="btn btn-light mt-3">Hire Me</a>
+  </div>
+</header>
+
+<!-- About -->
+<section id="about" class="p-5">
+  <div class="container">
+    <h2 class="section-title text-center">About Me</h2>
+    <p class="text-center mx-auto" style="max-width: 700px;">
+      I am a passionate frontend web developer. I am resilient and ready to work either on-site or remotely.
+      In my journey as a developer, I’ve built valuable skills including problem-solving and solution creation.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-light p-5">
+  <div class="container">
+    <h2 class="section-title text-center">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-3 col-6 mb-4">💻 HTML</div>
+      <div class="col-md-3 col-6 mb-4">🎨 CSS</div>
+      <div class="col-md-3 col-6 mb-4">⚙️ JavaScript</div>
+      <div class="col-md-3 col-6 mb-4">🔧 Bootstrap</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="p-5">
+  <div class="container">
+    <h2 class="section-title text-center">Projects</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img src="#" class="card-img-top" alt="Project Image">
+          <div class="card-body">
+            <h5 class="card-title">Age Calculator</h5>
+            <p class="card-text">A calculator that will help you calculate your age. it is responsive and mobile friendly</p>
+            <a href="https://sirandy1234.github.io/Agecalculator.github.io/" target ="_blank" class="btn btn-outline-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- More project cards can go here -->
+       <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <img src="#" class="card-img-top" alt="Project Image">
+          <div class="card-body">
+            <h5 class="card-title">Sticky Nav-Bar</h5>
+            <p class="card-text">A nav bar that shows how to navigate a website</p>
+            <a href="https://sirandy1234.github.io/sticky-nav.github.io/" target ="_blank" class="btn btn-outline-primary">View Project</a>
+          </div>
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+<section id="contact" class="bg-light p-5">
+  <div class="container">
+    <h2 class="section-title text-center">Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/mkgbldbb" method="POST" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" name="name" id="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea name="message" id="message" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" id="submit-btn" class="btn btn-primary w-100">
+        <span id="btn-text">Send Message</span>
+        <span id="btn-spinner" class="spinner-border d-none" role="status" aria-hidden="true"></span>
+      </button>
+      <div id="form-message" class="mt-3 text-center fw-bold" style="display: none;"></div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">© 2025 Anderson Idegbor Peter. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function myFunction() {
+    alert("You clicked a navigation link.");
+  }
+
+  // Contact Form Submission
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const btnSpinner = document.getElementById('btn-spinner');
+  const messageBox = document.getElementById('form-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Show loading spinner
+    btnText.textContent = 'Sending...';
+    btnSpinner.classList.remove('d-none');
+    submitBtn.disabled = true;
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    // Reset button
+    btnText.textContent = 'Send Message';
+    btnSpinner.classList.add('d-none');
+    submitBtn.disabled = false;
+
+    if (response.ok) {
+      form.reset();
+      messageBox.textContent = "✅ Thanks! Your message has been sent.";
+      messageBox.classList.remove("text-danger");
+      messageBox.classList.add("text-success");
+      messageBox.style.display = 'block';
+    } else {
+      messageBox.textContent = "❌ Oops! Something went wrong. Please try again.";
+      messageBox.classList.remove("text-success");
+      messageBox.classList.add("text-danger");
+      messageBox.style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>
